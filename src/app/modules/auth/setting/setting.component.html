@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="divst gird col-10" style="align-content: center;">
+
+    <h1>Products Registation</h1>
+
+    <form class="gird col-10 p-4 card" style="background-color: aqua;">
+      <div class="col-6" style="background-color: rgb(17, 235, 115);">
+      </div>
+      <div class="col-6" style="background-color: yellow;">
+        <div class="col-12 card flex justify-content-center" style="background-color: rgb(229, 66, 234);">
+          <span class="p-float-label">
+            <input pInputText id="name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" />
+            <label htmlFor="name">Product Name</label>
+          </span>
+        </div>
+        <div class="card flex justify-content-center">
+          <span class="p-float-label">
+            <input pInputText id="price" [(ngModel)]="price" [ngModelOptions]="{standalone: true}"
+              class="form-control" />
+            <label htmlFor="price">Price</label>
+          </span>
+        </div>
+        <div class="card flex justify-content-center">
+          <span class="p-float-label">
+            <input pInputText id="stcode" [(ngModel)]="stcode" [ngModelOptions]="{standalone: true}"
+              class="form-control" />
+            <label htmlFor="stcode">Stcode</label>
+          </span>
+        </div>
+        <div class="card flex justify-content-center">
+          <span class="p-float-label">
+            <input pInputText id="date_pd" [(ngModel)]="date_pd" [ngModelOptions]="{standalone: true}"
+              class="form-control" />
+            <label htmlFor="date_pd">Date-Time</label>
+          </span>
+        </div>
+        <div class="card flex justify-content-center">
+          <span class="p-float-label">
+            <input pInputText id="image" [(ngModel)]="image" [ngModelOptions]="{standalone: true}"
+              class="form-control" />
+            <label htmlFor="image">Image</label>
+          </span>
+        </div>
+
+        <button type="button" (click)="save()"
+          class="bg-primary border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700">
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <div class=" container2 mt-4">
+      <h1 style="background-color: aqua;">Products Table</h1>
+      <h1 *ngIf="!isResultLoaded">Loading..........</h1>
+      <div class="gird col-12" style="background-color: rgb(182, 85, 85);">
+      <table class="table col-10 card" style="margin-top: 2rem; background: #DADBDD;">
+
+        <thead class="col-12">
+          <tr>
+            <th scope="col-2">ID</th>
+            <th scope="col-2">Product Name</th>
+            <th scope="col-2">Price</th>
+            <th scope="col-2">Status</th>
+            <th scope="col-2">DateTime</th>
+            <th scope="col-2">Image</th>
+          </tr>
+        </thead>
+
+        <tbody class="col-12">
+          <tr *ngFor=" let ProductItem of ProductArray">
+            <td>{{ProductItem.id }}</td>
+            <td>{{ProductItem.name }}</td>
+            <td>{{ProductItem.price }}</td>
+            <td>{{ProductItem.stcode }}</td>
+            <td>{{ProductItem.date_pd }}</td>
+            <!-- <td>{{ProductItem.image }}</td> -->
+            <img [src]="ProductItem.image" alt="Girl in a jacket"
+              class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round">
+
+            <td>
+
+              <button type="button" (click)="setUpdate(ProductItem)"
+                class="bg-primary border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700">
+                Edit
+              </button>
+              <button type="button" (click)="setDelete(ProductItem)"
+                class="bg-primary border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700"
+                style="margin-left: 2rem;">
+                Delete
+              </button>
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+</div>

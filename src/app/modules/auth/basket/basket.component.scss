@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix{
+  clear:both;
+}
+
+th, td {
+  width: 9.375rem;
+  text-align: center;
+}
+
+/* ลบขอบสนาม */
+.p-datatable tr, .p-datatable th, .p-datatable td {
+  border: none;
+
+}
+
+/* สีพื้นหลังของแถวเมื่อเมาส์ Hover */
+.p-datatable .p-datatable-row:hover {
+  background-color: #f0f0f0;
+}
+

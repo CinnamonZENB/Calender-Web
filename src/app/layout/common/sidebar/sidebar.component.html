@@ -1,0 +1,10 @@
+<p-dock [model]="items">
+  <ng-template pTemplate="item" let-item>
+    <img
+      [src]="item.icon"
+      [alt]="item.label"
+      width="100%"
+      (click)="onClick(item.router)"
+    />
+  </ng-template>
+</p-dock>

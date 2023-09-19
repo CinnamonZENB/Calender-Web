@@ -1,0 +1,30 @@
+<div class="main-custom container">
+
+  <h1 style="font-size: 3.75rem; margin-left: 6vw;color: #FACA72;">Contact Us</h1>
+
+  <div class="card button-custom-name col-sm">
+    <span class="p-float-label">
+      <input pInputText id="username" [(ngModel)]="nameUser" style="width: 37.5rem; height: 3.125rem;" />
+      <label htmlFor="username ">Username</label>
+    </span>
+  </div>
+
+  <div class="card button-custom-mail col-sm">
+    <span class="p-float-label">
+      <input pInputText id="e-mail" [(ngModel)]="mailUser" style="width: 37.5rem; height: 3.125rem;" />
+      <label htmlFor="e-mail">E-mail</label>
+    </span>
+  </div>
+
+  <div class="card button-custom-msg col-sm">
+    <span class="p-float-label">
+      <input pInputText id="massage" [(ngModel)]="massage" style="width: 37.5rem; height: 12.5rem; " />
+      <label htmlFor="massage ">Massage</label>
+    </span>
+  </div>
+
+  <div class="card flex justify-content-center box col-sm">
+    <p-button label="Submit" icon="pi pi-check" iconPos="right"
+      styleClass="p-button-outlined p-button-warning p-button-rounded "></p-button>
+  </div>
+</div>

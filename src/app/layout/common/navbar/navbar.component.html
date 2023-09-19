@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="grid">
+    <div class="col-12 flex">
+      <p-menubar [model]="items" class="card cardstyle">
+        <ng-template pTemplate="start">
+          <div class="flex logo">
+            <img src="../../../../assets/images/logo_new3.1.png" style="width: 12.5rem;">
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate="end">
+          <div class="flex gap-3 align-items-center font-size: 2vw">
+            <!-- เมนูบาร์ชุดที่ 1 -->
+            <!-- <i class="fas fa-sign-in-alt" routerLink="/login"></i> -->
+            <!-- เมนูบาร์ชุดที่ 2 -->
+            <i class="fas fa-sign-out-alt" (click)="logout()"></i>
+          </div>
+        </ng-template>
+      </p-menubar>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container" style="background-color: aqua;">
+  <div class="grid">
+    <div class="col-12 flex">
+      <p-menubar [model]="items" class="card cardstyle">
+        <ng-template pTemplate="start">
+          <div class="flex logo">
+            <img src="../../../../assets/images/logo_new3.1.png" style="width: 12.5rem; ">
+          </div>
+        </ng-template>
+      </p-menubar>
+    </div>
+  </div>
+</div> -->
