@@ -60,13 +60,6 @@ export const routes: Route[] = [
             (m) => m.ContactModule
           ),
       },
-      // {
-      //   path: 'profile',
-      //   loadChildren: () =>
-      //     import('src/app/modules/auth/profile/profile.module').then(
-      //       (m) => m.ProfileModule
-      //     ),
-      // },
       {
         path: 'login',
         loadChildren: () =>
@@ -80,7 +73,7 @@ export const routes: Route[] = [
           import('src/app/modules/auth/setting/setting.module').then(
             (m) => m.SettingModule
           ),
-          // canActivate: [AuthGuard]
+          canActivate: [AuthGuard]
       },
     ],
   },

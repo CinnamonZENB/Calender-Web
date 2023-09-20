@@ -26,7 +26,7 @@ export class SettingComponent implements OnInit {
 
   ngOnInit() {
     if (!this.authService.isLoggedIn()) {
-      // ถ้าผู้ใช้ไม่ได้เข้าสู่ระบบ ให้นำไปยังหน้า Login
+      // ไม่ได้เข้าสู่ระบบ ให้นำไปยังหน้า Login
       this.router.navigate(['/login']);
     }
 

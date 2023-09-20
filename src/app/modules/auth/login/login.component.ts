@@ -9,34 +9,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  // AccountArray: any[] = [];
-  // isResultLoaded = false;
-  // isUpdateFormActive = false;
-
   mail: string = '';
   password: string = '';
-  // st_user: string = '';
-  // currentAccountID = '';
 
   constructor(
     private http: HttpClient,
     private router: Router,
     private authService: AuthService
-  ) {
-    // this.getAllAccount();
-  }
-
-  // getAllAccount() {
-  //   this.http
-  //     .get('http://localhost:8000/api/account/get')
-  //     .subscribe((resultData: any) => {
-  //       this.isResultLoaded = true;
-  //       console.log(resultData.data);
-  //       this.AccountArray = resultData.data;
-  //     });
-  // }
+  ) {}
 
   ngOnInit() {
+    // this.authService.login();
+  }
+
+  onLogin() {
+    // ทำการล็อกอิน
     this.authService.login();
   }
 
@@ -57,7 +44,7 @@ export class LoginComponent {
           this.router.navigate(['/home']);
           console.log('Login successful');
 
-           this.authService.login();
+          this.authService.login();
         } else {
           // Login failed, display an error message to the user
           console.log('Login failed: ' + response.message);

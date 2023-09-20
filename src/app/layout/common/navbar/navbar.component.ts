@@ -16,11 +16,10 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router,private authService: AuthService) {}
 
   logout() {
-    // this.router.navigate(['/login']);
+
+    this.router.navigate(['/home']);
 
     this.authService.logout();
-
-    window.location.reload();
   }
 
   /* -------------------------------------------------------------------------- */
@@ -54,24 +53,6 @@ export class NavbarComponent implements OnInit {
         label: 'Setting',
         routerLink: '/setting',
       },
-      // {
-      //   label: 'Users',
-      //   icon: 'pi pi-fw pi-user',
-      //   items: [
-      //     {
-      //       label: 'Login',
-      //       icon: 'pi pi-sign-in',
-      //       routerLink: '/log-in',
-      //     },
-      //     {
-      //       label: 'Logout',
-      //       icon: 'pi pi-sign-out',
-      //       command: () => {
-      //         this.logout();
-      //       },
-      //     },
-      //   ],
-      // },
     ];
   }
 }
