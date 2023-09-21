@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   mail: string = '';
-  password: string = '';
+  pass: string = '';
 
   constructor(
     private http: HttpClient,
@@ -31,13 +31,13 @@ export class LoginComponent {
   onSubmit() {
     const formData = {
       mail: this.mail, // Replace with your actual username input field value
-      password: this.password, // Replace with your actual password input field value
+      pass: this.pass, // Replace with your actual password input field value
     };
 
     console.log('Email:', formData.mail);
-    console.log('Password:', formData.password);
+    console.log('Password:', formData.pass);
 
-    this.http.post('http://localhost:8000/api/login', formData).subscribe(
+    this.http.post('http://localhost:8080/api/admin/login', formData).subscribe(
       (response: any) => {
         if (response.status === true) {
           // Login successful, handle it accordingly (e.g., redirect)

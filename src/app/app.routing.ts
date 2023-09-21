@@ -18,20 +18,20 @@ export const routes: Route[] = [
       layout: ELayout.MODERN,
     },
     children: [
-      {
-        path: 'sign-in',
-        loadChildren: () =>
-          import('src/app/modules/auth/sign-in/sign-in.module').then(
-            (m) => m.SignInModule
-          ),
-      },
-      {
-        path: 'sign-up',
-        loadChildren: () =>
-          import('src/app/modules/auth/sign-up/sign-up.module').then(
-            (m) => m.SignUpModule
-          ),
-      },
+      // {
+      //   path: 'sign-in',
+      //   loadChildren: () =>
+      //     import('src/app/modules/auth/sign-in/sign-in.module').then(
+      //       (m) => m.SignInModule
+      //     ),
+      // },
+      // {
+      //   path: 'sign-up',
+      //   loadChildren: () =>
+      //     import('src/app/modules/auth/sign-up/sign-up.module').then(
+      //       (m) => m.SignUpModule
+      //     ),
+      // },
       {
         path: 'home',
         loadChildren: () =>

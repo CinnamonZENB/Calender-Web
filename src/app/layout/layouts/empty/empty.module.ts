@@ -3,11 +3,8 @@ import { CommonModule } from '@angular/common';
 import { EmptyComponent } from './empty.component';
 import { ShareModule } from 'src/app/shared/shared.module';
 
-import { LoginModule } from 'src/app/modules/auth/login/login.module';
-
-
 @NgModule({
-  imports: [CommonModule,ShareModule,LoginModule],
+  imports: [CommonModule,ShareModule],
   declarations: [EmptyComponent],
   exports: [EmptyComponent],
 })

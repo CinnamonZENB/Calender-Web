@@ -44,7 +44,7 @@ export class StoresComponent implements OnInit {
 
   loadProducts() {
     this.http
-        .get("http://localhost:8000/api/product/get")
+        .get("http://localhost:8080/api/product/get")
         .subscribe((resultData: any) => {
             this.isResultLoaded = true;
             console.log(resultData.data);

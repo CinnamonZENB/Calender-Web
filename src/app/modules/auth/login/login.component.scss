@@ -167,10 +167,10 @@ iframe {
   padding: 55px 55px 37px 55px;
 
   background: #f1b229;
-  background: -webkit-linear-gradient(top, #f1b229, #b224ef);
-  background: -o-linear-gradient(top, #f1b229, #b224ef);
-  background: -moz-linear-gradient(top, #f1b229, #b224ef);
-  background: linear-gradient(top, #f1b229, #b224ef);
+  background: -webkit-linear-gradient(to top, #f1b229, #f66c17);
+  background: -o-linear-gradient(to top, #f1b229, #f66c17);
+  background: -moz-linear-gradient(to top, #f1b229, #f66c17);
+  background: linear-gradient(to top, #f1b229, #f66c17);
 }
 
 
@@ -206,7 +206,7 @@ iframe {
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
-
+  // background: linear-gradient(to top, #f1b229, #f66c17);
   display: block;
 }
 
@@ -324,7 +324,7 @@ iframe {
 .label-checkbox100 {
   font-family: Poppins-Regular;
   font-size: 13px;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.2;
 
   display: block;
@@ -397,10 +397,10 @@ iframe {
   border-radius: 25px;
 
   background: #e9ac6f;
-  background: -webkit-linear-gradient(bottom, #e9ac6f, #b224ef);
-  background: -o-linear-gradient(bottom, #e9ac6f, #b224ef);
-  background: -moz-linear-gradient(bottom, #e9ac6f, #b224ef);
-  background: linear-gradient(bottom, #e9ac6f, #b224ef);
+  background: -webkit-linear-gradient(to bottom, #e9ac6f, #b224ef);
+  background: -o-linear-gradient(to bottom, #e9ac6f, #b224ef);
+  background: -moz-linear-gradient(to bottom, #e9ac6f, #b224ef);
+  background: linear-gradient(to bottom, #e9ac6f, #b224ef);
   position: relative;
   z-index: 1;
 

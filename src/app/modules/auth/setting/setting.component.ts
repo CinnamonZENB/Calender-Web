@@ -33,7 +33,7 @@ export class SettingComponent implements OnInit {
   }
   getAllProduct() {
     this.http
-      .get('http://localhost:8000/api/product/get')
+      .get('http://localhost:8080/api/product/get')
       .subscribe((resultData: any) => {
         this.isResultLoaded = true;
         console.log(resultData.data);
@@ -50,7 +50,7 @@ export class SettingComponent implements OnInit {
       image: this.image,
     };
     this.http
-      .post('http://localhost:8000/api/product/add', bodyData)
+      .post('http://localhost:8080/api/product/add', bodyData)
       .subscribe((resultData: any) => {
         console.log(resultData);
         alert('Employee Registered Successfully');
@@ -78,7 +78,7 @@ export class SettingComponent implements OnInit {
 
     this.http
       .put(
-        'http://localhost:8000/api/update' + '/' + this.currentProductID,
+        'http://localhost:8080/api/update' + '/' + this.currentProductID,
         bodyData
       )
       .subscribe((resultData: any) => {
@@ -95,7 +95,7 @@ export class SettingComponent implements OnInit {
 
     this.http
       .put(
-        'http://localhost:8000/api/update' + '/' + this.currentProductID,
+        'http://localhost:8080/api/update' + '/' + this.currentProductID,
         bodyData
       )
       .subscribe((resultData: any) => {
@@ -108,7 +108,7 @@ export class SettingComponent implements OnInit {
   getProduct() {
     this.http
       .get(
-        'http://localhost:8000/api/product/get' + '/' + this.currentProductID
+        'http://localhost:8080/api/product/get' + '/' + this.currentProductID
       )
       .subscribe((resultData: any) => {
         this.isResultLoaded = true;
@@ -127,7 +127,7 @@ export class SettingComponent implements OnInit {
 
   setDelete(data: any) {
     this.http
-      .delete('http://localhost:8000/api/delete' + '/' + data.id)
+      .delete('http://localhost:8080/api/delete' + '/' + data.id)
       .subscribe((resultData: any) => {
         console.log(resultData);
         alert('Product Deletedddd');
