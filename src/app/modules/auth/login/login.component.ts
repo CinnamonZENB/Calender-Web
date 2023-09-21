@@ -30,6 +30,35 @@ export class LoginComponent {
   // Add a method to handle form submission
   onSubmit() {
     const formData = {
+      mail: this.mail,
+      pass: this.pass,
+    };
+
+    console.log('Email:', formData.mail);
+    console.log('Password:', formData.pass);
+
+    this.http.post('http://localhost:8080/api/admin/login', formData).subscribe(
+      (response: any) => {
+        if (response.status === true) {
+          // Login successful, handle it accordingly (e.g., redirect)
+          this.router.navigate(['/home']);
+          console.log('Login Admin successful');
+
+          this.authService.login();
+        } else {
+          // Login failed, display an error message to the user
+          console.log('Login failed: ' + response.message);
+        }
+      },
+      (error) => {
+        console.error('Login error:', error);
+        // Handle the error, e.g., display an error message to the user.
+      }
+    );
+  }
+
+  onSubmitUser() {
+    const formData = {
       mail: this.mail, // Replace with your actual username input field value
       pass: this.pass, // Replace with your actual password input field value
     };
@@ -37,7 +66,7 @@ export class LoginComponent {
     console.log('Email:', formData.mail);
     console.log('Password:', formData.pass);
 
-    this.http.post('http://localhost:8080/api/admin/login', formData).subscribe(
+    this.http.post('http://localhost:8080/api/login', formData).subscribe(
       (response: any) => {
         if (response.status === true) {
           // Login successful, handle it accordingly (e.g., redirect)
@@ -57,3 +86,4 @@ export class LoginComponent {
     );
   }
 }
+

@@ -74,7 +74,7 @@ export const routes: Route[] = [
           import('src/app/modules/auth/setting/setting.module').then(
             (m) => m.SettingModule
           ),
-          canActivate: [AuthGuard]
+          // canActivate: [AuthGuard] //open 1
       },
     ],
   },

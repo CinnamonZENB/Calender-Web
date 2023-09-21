@@ -1,86 +1,84 @@
-<div class="container">
-  <div class="divst gird col-10" style="align-content: center;">
+<div class="container" >
+  <div class="divst gird col-10" style="background-color: aqua;">
 
     <h1>Products Registation</h1>
 
     <form class="gird col-12">
 
-      <div class="form-group card justify-content-center">
+      <div class="form-group card ">
         <label>Product Name</label>
         <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control " id="name"
-          placeholder="Enter Name">
+          placeholder=" Name">
       </div>
 
-
-      <div class="form-group card justify-content-center">
+      <div class="form-group card ">
         <label>Price</label>
         <input type="text" [(ngModel)]="price" [ngModelOptions]="{standalone: true}" class="form-control " id="price"
-          placeholder="Enter Price">
+          placeholder=" Price">
       </div>
 
-      <div class="form-group card justify-content-center">
+      <div class="form-group card ">
         <label>Status</label>
         <input type="text" [(ngModel)]="stcode" [ngModelOptions]="{standalone: true}" class="form-control " id="stcode"
-          placeholder="Enter Status">
+          placeholder=" Status">
       </div>
 
-      <div class="form-group card justify-content-center">
+      <div class="form-group card ">
         <label>DateTime</label>
         <input type="text" [(ngModel)]="date_pd" [ngModelOptions]="{standalone: true}" class="form-control "
-          id="date_pd" placeholder="Enter DateTime">
+          id="date_pd" placeholder=" DateTime">
       </div>
 
-      <div class="form-group card justify-content-center">
+      <div class="form-group card ">
         <label>Image</label>
         <input type="text" [(ngModel)]="image" [ngModelOptions]="{standalone: true}" class="form-control " id="image"
-          placeholder="Enter Image">
+          placeholder=" Image">
       </div>
 
-      <div class="form-group card justify-content-center" style="margin-top: 1rem">
-        <p-button label="Save" icon="pi pi-upload" styleClass="p-button-raised margin-top: 1rem" (click)="save()"></p-button>
+      <div class="form-group card " style="margin-top: 1rem">
+        <p-button label="Save" icon="pi pi-upload" styleClass="p-button-raised margin-top: 1rem"
+          (click)="save()"></p-button>
       </div>
 
     </form>
 
-    <div class=" container2 mt-4">
-      <h1 >Products Table</h1>
+    <div class=" container2 mt-4" style="align-content: center; text-align: center;background-color: yellow;">
+      <h1>Products Table</h1>
       <h1 *ngIf="!isResultLoaded">Loading..........</h1>
-      <div class="gird col-12" >
-      <table class="table col-10 card" style="margin-top: 2rem; background: #DADBDD;">
+      <div class="gird col-10 divst" >
+        <table class="table col-12 card" style="margin-top: 2rem; background: #DADBDD;">
 
-        <thead class="col-12">
-          <tr>
-            <th scope="col-2">ID</th>
-            <th scope="col-2">Product Name</th>
-            <th scope="col-2">Price</th>
-            <th scope="col-2">Status</th>
-            <th scope="col-2">DateTime</th>
-            <th scope="col-2">Image</th>
-          </tr>
-        </thead>
+          <thead class="col-12 thead-cus">
+            <tr>
+              <th scope="col-2">ID</th>
+              <th scope="col-2">Product Name</th>
+              <th scope="col-2">Price</th>
+              <th scope="col-2">Status</th>
+              <th scope="col-2">DateTime</th>
+              <th scope="col-2">Image</th>
+              <th scope="col-1">Edit</th>
+              <th scope="col-1">Delete</th>
 
-        <tbody class="col-12">
-          <tr *ngFor=" let ProductItem of ProductArray">
-            <td>{{ProductItem.id }}</td>
-            <td>{{ProductItem.name }}</td>
-            <td>{{ProductItem.price }}</td>
-            <td>{{ProductItem.stcode }}</td>
-            <td>{{ProductItem.date_pd }}</td>
-            <!-- <td>{{ProductItem.image }}</td> -->
-            <img [src]="ProductItem.image" alt="Girl in a jacket"
-              class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round">
+            </tr>
+          </thead>
 
-            <td>
-              <div class="card flex flex-wrap gap-3 justify-content-center" style="margin-top: 1rem; margin-left: 1rem;">
-                <p-button label="Edit" icon="pi pi-wrench" styleClass="p-button-warning margin-top: 1rem" (click)="setUpdate(ProductItem)"></p-button>
-                <p-button label="Delete" icon="pi pi-trash" styleClass="p-button-danger margin-top: 1rem" (click)="setDelete(ProductItem)"></p-button>
-              </div>
-            </td>
-          </tr>
+          <tbody class="col-12 thead-cus">
+            <tr *ngFor=" let ProductItem of ProductArray">
+              <td>{{ProductItem.id }}</td>
+              <td>{{ProductItem.name }}</td>
+              <td>{{ProductItem.price }}</td>
+              <td>{{ProductItem.stcode }}</td>
+              <td>{{ProductItem.date_pd }}</td>
+              <!-- {{ProductItem.image }} -->
+              <td><img [src]="ProductItem.image" alt="Girl in a jacket" class="img"
+                style="width: 100px; height: 100px;"></td>
+              <td><i class="pi pi-wrench" (click)="setUpdate(ProductItem)"></i></td>
+              <td><i class="pi pi-trash" (click)="setDelete(ProductItem)"></i></td>
+            </tr>
+          </tbody>
 
-        </tbody>
-      </table>
-    </div>
+        </table>
+      </div>
     </div>
   </div>
 </div>

@@ -8,7 +8,6 @@
 }
 
 th, td {
-  width: 9.375rem;
   text-align: center;
 }
 
@@ -21,3 +20,20 @@ th, td {
   background-color: #f0f0f0;
 }
 
+@media (max-width: 500px) {
+  .p-datatable .p-datatable-header {
+    border: none;
+  }
+  p {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .p-datatable .p-datatable-header {
+    border: none;
+  }
+  p {
+    font-size: 2vw;
+  }
+}

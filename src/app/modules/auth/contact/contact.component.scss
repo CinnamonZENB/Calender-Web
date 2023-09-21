@@ -3,58 +3,137 @@
   padding: 0;
 }
 
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3vw;
+@media (max-width: 500px) { //น้อยกว่า
 
-}
+  .button-custom-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.button-custom-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2vw;
-
-}
-
-.button-custom-mail {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2vw;
-
-}
-.button-custom-msg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2vw;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-.main-custom {
-  margin-top: 0px;
-  padding: 0 auto;
-  background-color:#F9F9F9;
-  font: 1em sans-serif;
-}
-
-.clearfix {
-  clear: both;
-  display: table;
-}
-
-@media (max-width: 768px) {
-  .main-custom {
-    text-align: center;
   }
 
-  .button-custom-name,
-  .button-custom-mail,
+  .button-custom-mail {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+  }
   .button-custom-msg {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .main-custom {
+    margin-top: 0px;
+    padding: 0 auto;
+    background-color:#F9F9F9;
+    font: 1em sans-serif;
+  }
+
+  .text-cus {
+    font-size: 10vw;
+    margin-left: 6vw;
+    color: #FACA72;
+  }
+
+  .input-cus{
+    width: 85vw;
+    height: 10vw;
+    margin-top: 8%;
+  }
+  .input-cus-2{
+    width: 85vw;
+    height: 10vw;
+    margin-top: 8%;
+  }
+
+  .input-cus-3 {
+    width: 85vw;
+    height: 50vw;
+    margin-top: 8%;
+  }
+  .text-cus-label {
+    font-size: vw;
+  }
+  .box {
+    margin-top: 8%;
+  }
+
+  .clearfix {
+    clear: both;
+    display: table;
   }
 }
+
+@media (min-width: 1000px) { //มากกว่า
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+
+  }
+
+  .button-custom-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+
+  }
+
+  .button-custom-mail {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+
+  }
+  .button-custom-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .main-custom {
+    margin-top: 0px;
+    padding: 0 auto;
+    background-color:#F9F9F9;
+    font: 1em sans-serif;
+  }
+
+  .text-cus {
+    font-size: 4rem;
+    margin-left: 6vw;
+    color: #FACA72;
+    margin-top: 0;
+  }
+
+  .input-cus{
+    width: 37.5rem;
+    height: 3.125rem;
+  }
+
+  .input-cus-2 {
+    width: 37.5rem;
+    height: 3.125rem;
+  }
+
+  .input-cus-3{
+    width: 37.5rem;
+    height: 12.5rem;
+  }
+
+  .clearfix {
+    clear: both;
+    display: table;
+  }
+
+}
+
