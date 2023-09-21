@@ -1,71 +1,111 @@
-form-group {
-  font-size: 1.6rem;
-  max-width: 3.75;
-  margin: 0 auto;
-  padding: 0 auto;
-  text-align: center;
-}
+@media (max-width: 600px){
+  h1{
+    font-size: 6.5vw;
+  }
+  .container{
+    margin: 0 auto;
+    padding: 0 auto;
+    align-content: center;
+    text-align: center;
+    table-layout: auto;
+    justify-content: center;
+  }
 
-form {
-  font-size: 1.6rem;
-  margin: 0 auto;
-  padding: 0 auto;
-  text-align: center;
-}
+  .container2 {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-content: center;
+    text-align: center;
+    table-layout: auto;
+    justify-content: center;
+  }
 
-label {
-  font-size: 1.6rem;
-  max-width: 3.75;
-  margin: 0 auto;
-  padding: 0 auto;
-  text-align: center;
-  table-layout: auto;
-}
+  .divst {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-items: center;
+    text-align: center;
+    text-rendering: auto;
+  }
 
-.container2.container {
-  margin: 0 auto;
-  padding: 0 auto;
-  align-content: center;
-  text-align: center;
-  table-layout: auto;
-}
+  .form-group{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 5vw;
+  }
+  .form-control {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 5vw;
+    margin-left: 5%;
+  }
 
-.card {
-  text-align: center;
-}
+  .thead-cus {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 1.8vw;
+  }
 
-thead {
-  text-align: center;
-}
+  .img {
+    width: 20px;
+    height: 20px;
+  }
 
-.table {
-  text-align: center;
-  margin: 0 auto;
-  padding: auto;
-}
-
-input {
-  margin: 0 auto;
-  padding: 0 auto;
-  margin-left: 2rem;
-}
-
-h1 {
-  margin: 0 auto;
-  padding: 0 auto;
-  text-align: center;
-}
-
-.divst {
-  margin: 0 auto;
-  padding: 0 auto;
-  align-items: center;
-}
-
-.button-custom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2vw;
+  .table {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-content: center;
+    text-align: center;
+    text-rendering: auto;
+  }
 
 }
+
+@media (min-width: 1200px){
+  .container{
+    margin: 0 auto;
+    padding: 0 auto;
+    align-content: center;
+    text-align: center;
+    table-layout: auto;
+    justify-content: center;
+  }
+
+  .container2 {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-content: center;
+    text-align: center;
+    table-layout: auto;
+    justify-content: center;
+  }
+
+
+  .divst {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-items: center;
+    text-align: center;
+    text-rendering: auto;
+  }
+
+  .form-group{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 1.8vw;
+  }
+  .form-control {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 1.5vw;
+    margin-left: 5%;
+  }
+}
+
+
+

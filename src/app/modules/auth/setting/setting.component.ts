@@ -25,10 +25,10 @@ export class SettingComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (!this.authService.isLoggedIn()) {
-      // ไม่ได้เข้าสู่ระบบ ให้นำไปยังหน้า Login
-      this.router.navigate(['/login']);
-    }
+    // if (!this.authService.isLoggedIn()) {
+    //   // ไม่ได้เข้าสู่ระบบ ให้นำไปยังหน้า Login
+    //   this.router.navigate(['/login']);
+    // } open 2
 
   }
   getAllProduct() {

@@ -82,6 +82,7 @@ import { TreeTableModule } from 'primeng/treetable';
 import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginModule } from 'src/app/modules/auth/login/login.module';
 
 
 const primeNG = [
@@ -171,6 +172,7 @@ const primeNG = [
   AnimateModule,
   CardModule,
   FlexLayoutModule
+
 ];
 
 @NgModule({
