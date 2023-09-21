@@ -38,6 +38,7 @@ export const routes: Route[] = [
           import('src/app/modules/auth/home/home.module').then(
             (m) => m.HomeModule
           ),
+
       },
       {
         path: 'stores',
