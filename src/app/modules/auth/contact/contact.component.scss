@@ -35,6 +35,25 @@
   margin-right: auto;
 
 }
+
+.button-custom-1 {
+  margin: 0 auto;
+  padding: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 4vw;
+}
+.button-custom-2 {
+
+  margin: 0 auto;
+  padding: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 20vw;
+}
+
 .main-custom {
   margin-top: 0px;
   padding: 0 auto;
@@ -46,15 +65,41 @@
   clear: both;
   display: table;
 }
+h1{
+  font-size: 3.75rem;
+  margin-left: 6vw;
+  color: #FACA72;
+}
 
 @media (max-width: 768px) {
   .main-custom {
     text-align: center;
   }
 
-  .button-custom-name,
-  .button-custom-mail,
-  .button-custom-msg {
-    width: 100%;
+  h1{
+    font-size: 10vw;
+    text-align: center;
+    color: #FACA72;
+  }
+
+  .button-custom-1{
+    margin: 0 auto;
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90vw;
+    height: 10vw;
+    margin-top: 3%;
+  }
+  .button-custom-2 {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90vw;
+    height: 50vw;
+    margin-top: 3%;
   }
 }

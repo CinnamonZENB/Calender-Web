@@ -6,34 +6,34 @@
     <form class="gird col-12">
 
       <div class="form-group card justify-content-center">
-        <label>Product Name</label>
+        <label >Product Name</label>
         <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control " id="name"
-          placeholder="Enter Name">
+          placeholder=" Name">
       </div>
 
 
       <div class="form-group card justify-content-center">
         <label>Price</label>
         <input type="text" [(ngModel)]="price" [ngModelOptions]="{standalone: true}" class="form-control " id="price"
-          placeholder="Enter Price">
+          placeholder=" Price">
       </div>
 
       <div class="form-group card justify-content-center">
         <label>Status</label>
         <input type="text" [(ngModel)]="stcode" [ngModelOptions]="{standalone: true}" class="form-control " id="stcode"
-          placeholder="Enter Status">
+          placeholder=" Status">
       </div>
 
       <div class="form-group card justify-content-center">
         <label>DateTime</label>
         <input type="text" [(ngModel)]="date_pd" [ngModelOptions]="{standalone: true}" class="form-control "
-          id="date_pd" placeholder="Enter DateTime">
+          id="date_pd" placeholder=" DateTime">
       </div>
 
       <div class="form-group card justify-content-center">
         <label>Image</label>
         <input type="text" [(ngModel)]="image" [ngModelOptions]="{standalone: true}" class="form-control " id="image"
-          placeholder="Enter Image">
+          placeholder=" Image">
       </div>
 
       <div class="form-group card justify-content-center" style="margin-top: 1rem">
@@ -46,41 +46,49 @@
       <h1 >Products Table</h1>
       <h1 *ngIf="!isResultLoaded">Loading..........</h1>
       <div class="gird col-12" >
-      <table class="table col-10 card" style="margin-top: 2rem; background: #DADBDD;">
 
-        <thead class="col-12">
-          <tr>
-            <th scope="col-2">ID</th>
-            <th scope="col-2">Product Name</th>
-            <th scope="col-2">Price</th>
-            <th scope="col-2">Status</th>
-            <th scope="col-2">DateTime</th>
-            <th scope="col-2">Image</th>
-          </tr>
-        </thead>
+      <div class="grid">
+        <p-dataView #dv [value]="ProductArray">
+          <ng-template let-product pTemplate="listItem">
+            <div class="col-12">
 
-        <tbody class="col-12">
-          <tr *ngFor=" let ProductItem of ProductArray">
-            <td>{{ProductItem.id }}</td>
-            <td>{{ProductItem.name }}</td>
-            <td>{{ProductItem.price }}</td>
-            <td>{{ProductItem.stcode }}</td>
-            <td>{{ProductItem.date_pd }}</td>
-            <!-- <td>{{ProductItem.image }}</td> -->
-            <img [src]="ProductItem.image" alt="Girl in a jacket"
-              class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round">
+              <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+                <img class="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" [src]=" product.image"
+                  [alt]="product.name" />
+                <div
+                  class="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
 
-            <td>
-              <div class="card flex flex-wrap gap-3 justify-content-center" style="margin-top: 1rem; margin-left: 1rem;">
-                <p-button label="Edit" icon="pi pi-wrench" styleClass="p-button-warning margin-top: 1rem" (click)="setUpdate(ProductItem)"></p-button>
-                <p-button label="Delete" icon="pi pi-trash" styleClass="p-button-danger margin-top: 1rem" (click)="setDelete(ProductItem)"></p-button>
+                  <div class="flex flex-column align-items-center sm:align-items-start gap-3">
+                    <div class="text-2xl font-bold text-900">{{ product.name }}</div>
+                    <div class="text-2xl font-bold text-900">{{ product.price+'$'}}</div>
+                    <div class="text-2xl font-bold text-900">{{ product.date_pd }} </div>
+                    <div class="flex align-items-center gap-3">
+                      <span class="flex align-items-center gap-2">
+                        <i class="pi pi-tag"></i>
+                        <span class="font-semibold">{{ product.stcode }}</span>
+                      </span>
+                      <!-- <p-tag [value]="product.stcode" [severity]="getSeverity(product)"></p-tag> -->
+                    </div>
+                  </div>
+
+                  <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
+                    <!-- <span class="text-2xl font-semibold">{{'$'+ product.price }}</span> -->
+                    <button pButton icon="pi pi-wrench" class="md:align-self-end mb-2 p-button-rounded"
+                      (click)="setUpdate(product)"></button>
+                    <button pButton icon="pi pi-trash" class="md:align-self-end mb-2 p-button-rounded"
+                       (click)="setDelete(product)"></button>
+                  </div>
+
+                </div>
               </div>
-            </td>
-          </tr>
 
-        </tbody>
-      </table>
+            </div>
+          </ng-template>
+        </p-dataView>
+      </div>
+
     </div>
+
     </div>
   </div>
 </div>

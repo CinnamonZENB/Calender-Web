@@ -1,16 +1,29 @@
 form-group {
-  font-size: 1.6rem;
+  font-size: 1.6vw;
   max-width: 3.75;
   margin: 0 auto;
   padding: 0 auto;
   text-align: center;
+  margin-top: 3%;
 }
 
 form {
-  font-size: 1.6rem;
+  font-size: 1.6vw;
   margin: 0 auto;
   padding: 0 auto;
   text-align: center;
+  margin-top: 3%;
+}
+
+.form-control{
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  margin-left: 6%;
+  margin-top: 1%;
 }
 
 label {
@@ -54,12 +67,14 @@ h1 {
   margin: 0 auto;
   padding: 0 auto;
   text-align: center;
+  color: #d89116;
 }
 
 .divst {
   margin: 0 auto;
   padding: 0 auto;
   align-items: center;
+  text-align: center;
 }
 
 .button-custom {
@@ -67,5 +82,78 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 2vw;
+
+}
+
+@media (max-width: 768px) {
+
+  form-group {
+    font-size: 1.6vw;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .form-control{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+  }
+
+  .container2.container {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-content: center;
+    text-align: center;
+    table-layout: auto;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  thead {
+    text-align: center;
+  }
+
+  .table-custom {
+    text-align: center;
+    margin: 0 auto;
+    padding: auto;
+    font-size: 1vw;
+  }
+
+  input {
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-left: 2rem;
+  }
+
+  h1 {
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    font-size: 6vw;
+    color: rgb(217, 146, 14);
+  }
+
+  .divst {
+    margin: 0 auto;
+    padding: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .button-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+
+  }
 
 }
