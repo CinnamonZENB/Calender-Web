@@ -68,56 +68,6 @@ server.post("/api/admin/login", (req, res) => {
   );
 });
 
-// Handle login request
-server.post("/api/login", (req, res) => {
-
-  const { mail, pass } = req.body;
-  db.query(
-    "SELECT * FROM account WHERE mail = ? AND pass = ? ",
-    [mail, pass],
-    (error, results) => {
-      if (error) {
-        console.error("Error authenticating user:", error);
-        res.status(500).send({ status: false, message: "Internal server error" });
-      } else if (results.length > 0) {
-        // Successful login
-        res.send({ status: true, message: "Login User successful" });
-
-      } else {
-        // Login failed
-        res.send({ status: false, message: "Login failed" });
-
-      }
-    }
-  );
-});
-
-//Create account
-server.post("/api/account/add", (req, res) => {
-  let details = {
-    name    : req.body.name,
-    lastname   : req.body.lastname,
-    mail  : req.body.mail,
-    pass   : req.body.pass,
-    address   : req.body.address,
-  };
-
-  let sql = "INSERT INTO account SET ?";
-
-  db.query(sql, details, (error) => {
-    if (error) {
-      console.log("Error Connecting to DB");
-      res.send({ status: false, message: " creation Failed" });
-    } else {
-      console.log("Success Connecting to DB");
-      res.send({ status: true, message: " created successfully" });
-    }
-  });
-});
-
-
-
-
 //----------------------------------Product API----------------------------------//
 
 //Create the Records
